@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入bootstrap -->
+    <link href="{% static '/bootstrap-3.3.7/css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+    </nav>
+</div>
+
+{% block content %}
+{% endblock content %}
+
+<div class="footer">
+    <p>base</p>
+</div>
+<!-- jquery (bootstrap 的 js 插件需要引入 jquery -->
+<script src="{% static '/jquery/jquery-3.3.1.min.js' %}"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="{% static '/bootstrap-3.3.7/js/bootstrap.min.js' %}"></script>
+</body>
+</html>
