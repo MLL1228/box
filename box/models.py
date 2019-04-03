@@ -95,7 +95,7 @@ class Platform(models.Model):
         return self.platformName
 
 
-# 通知人p
+# 通知人
 class NotiPeople(models.Model):
     username = models.CharField(max_length=50, unique=True)  # 通知人，唯一
     isActive = models.BooleanField(default=True)  # 有效的通知人
